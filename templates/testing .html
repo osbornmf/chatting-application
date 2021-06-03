@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% from 'createRoom_macros.html' import render %}
+{% block body %}
+
+ <div class="d-flex justify-content-start" >
+
+    <button class=" button1" id="btn1"  type="submit"> create </button>
+    <h3>room id here</h3>
+        
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $('#btn1').click(function(){
+            $.ajax({
+                type:'GET',
+                url:'/room_id',
+                success : function(response){
+                        $('h3').text(response);
+                }
+
+            });
+        });
+    </script>
+
+</div>   
+
+    
+{% endblock %}
