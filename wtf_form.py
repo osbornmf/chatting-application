@@ -40,7 +40,7 @@ def user_find(form,field):
         raise ValidationError("username not registered")
     # except:
     #     print("in exception")
-    #     raise ValidationError("Username and Password incorrect")
+ 
 
 
 
